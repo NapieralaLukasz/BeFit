@@ -1,0 +1,20 @@
+﻿@model BeFit.Models.TrainingSession
+
+@{
+    ViewData["Title"] = "Szczegóły sesji treningowej";
+}
+
+<h1>Szczegóły sesji treningowej</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.StartTime)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.StartTime)</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.EndTime)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.EndTime)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edytuj</a>
+    <a asp-action="Index" class="btn btn-secondary">Powrót do listy</a>
+</div>
